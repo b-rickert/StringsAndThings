@@ -54,9 +54,7 @@ public class StringsAndThings {
     // base = "Hello There"
     // remove = "llo"
     public String removeString(String base, String remove){
-        String base = "Hello There";
-        String remove = base(base.substring(2, 4));
-            while indexOf(remove[0]);
+        return base.replace(remove, "");
         
     }
 
@@ -68,10 +66,15 @@ public class StringsAndThings {
      *           containsEqualNumberOfIsAndNot("This is notnot") // Should return true
      *           containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
-    //given 2 strings "base" and "remove"
-    //
+    // count how many "is" in string
+    //count how many "not" in string
+    // return true if they are equal, false if not
     public Boolean containsEqualNumberOfIsAndNot(String input){
-        return null;
+          int numIs = 0;
+          int numNot = 0;
+          
+          do {
+          }
     }
 
     /**
