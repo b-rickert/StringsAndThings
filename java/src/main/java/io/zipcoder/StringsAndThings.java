@@ -14,8 +14,27 @@ public class StringsAndThings {
      *           countYZ("day fez"); // Should return 2
      *           countYZ("day fyyyz"); // Should return 2
      */
-    public Integer countYZ(String input){
-        return null;
+
+     // count the words ending in y or z
+     // words do not count unless they end in y
+     // y is the last letter if it is followed by non-alphanumeric char
+
+    public Integer countYZ(String input) {
+        String[] words = input.split("\\P{Alnum}+");
+    
+        int count = 0;
+
+        for (int i = 0; i < words.length; i++) {
+            char lastCharInEachWord = words[i].charAt(words[i].length() - 1);
+
+            if (lastCharInEachWord == 'y' || lastCharInEachWord == 'z') {
+                count += 1;
+            }
+            
+        }
+
+        return count;
+        
     }
 
     /**
@@ -26,9 +45,19 @@ public class StringsAndThings {
      * example : removeString("Hello there", "llo") // Should return "He there"
      *           removeString("Hello there", "e") //  Should return "Hllo thr"
      *           removeString("Hello there", "x") // Should return "Hello there"
-     */
+     */ 
+    // given the strings base and remove 
+    // remove characters from string via substring()
+    // print the result of "remove" and see if it is true 
+    // String base does not print case sensitive characters, so need to find a way to remove the capital H and T
+    // implement a toLowerCase() and toUpperCase() loops somewhere (still figuring that out)
+    // base = "Hello There"
+    // remove = "llo"
     public String removeString(String base, String remove){
-        return null;
+        String base = "Hello There";
+        String remove = base(base.substring(2, 4));
+            while indexOf(remove[0]);
+        
     }
 
     /**
@@ -39,6 +68,8 @@ public class StringsAndThings {
      *           containsEqualNumberOfIsAndNot("This is notnot") // Should return true
      *           containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
+    //given 2 strings "base" and "remove"
+    //
     public Boolean containsEqualNumberOfIsAndNot(String input){
         return null;
     }
