@@ -70,11 +70,30 @@ public class StringsAndThings {
     //count how many "not" in string
     // return true if they are equal, false if not
     public Boolean containsEqualNumberOfIsAndNot(String input){
-          int numIs = 0;
-          int numNot = 0;
-          
-          do {
-          }
+        int numIs = 0;
+        int numNot = 0;
+        int index = 0;
+
+        while(true) {
+            index = input.indexOf("is" , index);
+            if (index == -1) {
+                break;
+            }
+            numIs++;
+            index = index + "is".length();
+            } 
+
+            index = 0;
+
+        while(true) {
+            index = input.indexOf("not" , index);
+            if (index == -1) {
+                break;
+            }
+            numNot++;
+            index = index + "not".length();
+        }
+        return numIs == numNot;
     }
 
     /**
@@ -85,8 +104,18 @@ public class StringsAndThings {
      *           gHappy("xxggyygxx") // Should return  false
      */
     public Boolean gIsHappy(String input){
-        return null;
-    }
+        Boolean gIsHappy = true;
+        int count = 0;
+        for (int i = 0; i < input.length(); i++) {
+            if(input == "gg") {
+                return true;
+            } else if {
+                input =! "gg";
+                return false;
+            }
+        }
+}
+    
 
 
     /**
